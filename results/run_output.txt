@@ -1,0 +1,12 @@
+$ python main.py --data-dir ../../dataset --output-dir results --inline
+INFO: Training function y1 -> ideal function y13 (SSE = 34.0807)
+INFO: Training function y2 -> ideal function y24 (SSE = 33.4518)
+INFO: Training function y3 -> ideal function y36 (SSE = 35.5727)
+INFO: Training function y4 -> ideal function y40 (SSE = 34.9989)
+INFO: Assigned 34 test points, 66 remain unassigned.
+y1 -> y13: SSE = 34.0807, max. deviation = 0.4992, allowed = 0.7060
+y2 -> y24: SSE = 33.4518, max. deviation = 0.4990, allowed = 0.7057
+y3 -> y36: SSE = 35.5727, max. deviation = 0.4989, allowed = 0.7056
+y4 -> y40: SSE = 34.9989, max. deviation = 0.4998, allowed = 0.7068
+Assigned test points: 34, not assigned: 66
+Tables: ideal_functions, test_mapping, training_data; report: results\report.html

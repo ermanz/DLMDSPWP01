@@ -1,0 +1,4 @@
+bokeh>=3.4
+numpy>=1.26
+pandas>=2.2
+SQLAlchemy>=2.0

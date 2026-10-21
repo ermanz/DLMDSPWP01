@@ -1,0 +1,130 @@
+$ python -m unittest discover -s tests -t . -v
+test_criterion_and_maximum_deviation (tests.test_analysis.IdealFunctionSelectorTest.test_criterion_and_maximum_deviation)
+Criterion, maximum deviation and tolerance match hand calculation. ... ok
+test_matrix_has_one_row_per_training_and_column_per_ideal_function (tests.test_analysis.IdealFunctionSelectorTest.test_matrix_has_one_row_per_training_and_column_per_ideal_function)
+The criterion matrix has shape 4 x 50. ... ok
+test_selects_the_generating_functions (tests.test_analysis.IdealFunctionSelectorTest.test_selects_the_generating_functions)
+The functions used to generate the training data are selected. ... ok
+test_training_range_outside_ideal_range_is_rejected (tests.test_analysis.IdealFunctionSelectorTest.test_training_range_outside_ideal_range_is_rejected)
+Training x values outside the ideal range raise SelectionError. ... ok
+test_dataframe_has_the_four_required_columns (tests.test_analysis.MappingResultTest.test_dataframe_has_the_four_required_columns)
+The result frame has the four columns of the result table. ... ok
+test_empty_result_gives_empty_dataframe (tests.test_analysis.MappingResultTest.test_empty_result_gives_empty_dataframe)
+An empty result converts into an empty data frame. ... ok
+test_closest_function_wins_if_several_qualify (tests.test_analysis.TestDataMapperTest.test_closest_function_wins_if_several_qualify)
+If two functions qualify, the closer one is chosen. ... ok
+test_invalid_configuration_is_rejected (tests.test_analysis.TestDataMapperTest.test_invalid_configuration_is_rejected)
+An empty list of matches or a non-positive factor is rejected. ... ok
+test_map_points_accepts_generator_and_separates_results (tests.test_analysis.TestDataMapperTest.test_map_points_accepts_generator_and_separates_results)
+A generator of points is mapped into assigned and unassigned points. ... ok
+test_point_beyond_tolerance_is_not_assigned (tests.test_analysis.TestDataMapperTest.test_point_beyond_tolerance_is_not_assigned)
+A point beyond the tolerance of every function is not assigned. ... ok
+test_point_exactly_on_boundary_is_assigned (tests.test_analysis.TestDataMapperTest.test_point_exactly_on_boundary_is_assigned)
+A point exactly on the limit sqrt(2) * D is assigned. ... ok
+test_point_outside_x_range_is_not_assigned (tests.test_analysis.TestDataMapperTest.test_point_outside_x_range_is_not_assigned)
+A point outside the x range of all functions is not assigned. ... ok
+test_point_within_tolerance_is_assigned (tests.test_analysis.TestDataMapperTest.test_point_within_tolerance_is_assigned)
+A point within the tolerance is assigned with its deviation. ... ok
+test_tie_break_uses_deviation_relative_to_tolerance (tests.test_analysis.TestDataMapperTest.test_tie_break_uses_deviation_relative_to_tolerance)
+Several candidates are compared relative to their own tolerance. ... ok
+test_database_file_is_created (tests.test_database.DatabaseFileTest.test_database_file_is_created)
+A database file is created and closed by the context manager. ... ok
+test_invalid_location_raises_database_error (tests.test_database.DatabaseFileTest.test_invalid_location_raises_database_error)
+An unusable database location raises DatabaseError. ... ok
+test_ideal_table_has_fifty_one_columns (tests.test_database.DatabaseManagerTest.test_ideal_table_has_fifty_one_columns)
+The ideal function table has 51 columns. ... ok
+test_mapping_table_has_four_columns_and_stored_values (tests.test_database.DatabaseManagerTest.test_mapping_table_has_four_columns_and_stored_values)
+The result table has four columns and keeps duplicate rows. ... ok
+test_mapping_table_is_replaced_on_every_run (tests.test_database.DatabaseManagerTest.test_mapping_table_is_replaced_on_every_run)
+Storing a new result replaces the previous one. ... ok
+test_reading_unknown_table_raises_database_error (tests.test_database.DatabaseManagerTest.test_reading_unknown_table_raises_database_error)
+Reading a non-existent table raises DatabaseError. ... ok
+test_training_table_has_five_columns (tests.test_database.DatabaseManagerTest.test_training_table_has_five_columns)
+The training table has the columns x, y1 ... y4. ... ok
+test_empty_file_raises_data_load_error (tests.test_datasets.DatasetLoadingTest.test_empty_file_raises_data_load_error)
+An empty file is reported as DataLoadError. ... ok
+test_ideal_dataset_loads_fifty_functions (tests.test_datasets.DatasetLoadingTest.test_ideal_dataset_loads_fifty_functions)
+A valid ideal file yields fifty y columns. ... ok
+test_missing_file_raises_data_load_error (tests.test_datasets.DatasetLoadingTest.test_missing_file_raises_data_load_error)
+A missing file is reported as DataLoadError. ... ok
+test_training_dataset_loads_valid_file (tests.test_datasets.DatasetLoadingTest.test_training_dataset_loads_valid_file)
+A valid training file yields a TrainingDataset with four y columns. ... ok
+test_user_defined_errors_share_a_base_class (tests.test_datasets.DatasetLoadingTest.test_user_defined_errors_share_a_base_class)
+All user-defined errors derive from IdealFunctionError. ... ok
+test_column_names_are_normalised_and_rows_sorted (tests.test_datasets.DatasetValidationTest.test_column_names_are_normalised_and_rows_sorted)
+Column names are normalised and rows are sorted by x. ... ok
+test_data_property_returns_a_copy (tests.test_datasets.DatasetValidationTest.test_data_property_returns_a_copy)
+Changing the returned data does not alter the dataset. ... ok
+test_duplicate_x_rejected_for_functions_but_allowed_for_test_data (tests.test_datasets.DatasetValidationTest.test_duplicate_x_rejected_for_functions_but_allowed_for_test_data)
+Repeated x values are only allowed in test data. ... ok
+test_first_column_must_be_x (tests.test_datasets.DatasetValidationTest.test_first_column_must_be_x)
+A first column other than x is rejected. ... ok
+test_ideal_dataset_creates_numbered_ideal_functions (tests.test_datasets.DatasetValidationTest.test_ideal_dataset_creates_numbered_ideal_functions)
+The overridden to_functions returns numbered IdealFunctions. ... ok
+test_missing_values_are_rejected (tests.test_datasets.DatasetValidationTest.test_missing_values_are_rejected)
+Missing values (NaN) are rejected. ... ok
+test_non_numeric_values_are_rejected (tests.test_datasets.DatasetValidationTest.test_non_numeric_values_are_rejected)
+Non-numeric cells are rejected. ... ok
+test_wrong_number_of_columns_is_rejected (tests.test_datasets.DatasetValidationTest.test_wrong_number_of_columns_is_rejected)
+Training data with three y columns are rejected. ... ok
+test_missing_file_raises_data_load_error (tests.test_datasets.TestDatasetStreamingTest.test_missing_file_raises_data_load_error)
+A missing file is reported as DataLoadError. ... ok
+test_missing_value_is_rejected (tests.test_datasets.TestDatasetStreamingTest.test_missing_value_is_rejected)
+A missing value in a test row is rejected. ... ok
+test_reading_is_lazy (tests.test_datasets.TestDatasetStreamingTest.test_reading_is_lazy)
+Rows are read one at a time, so earlier rows are available first. ... ok
+test_rows_are_yielded_as_float_tuples (tests.test_datasets.TestDatasetStreamingTest.test_rows_are_yielded_as_float_tuples)
+Each data line is yielded as an (x, y) tuple of floats. ... ok
+test_wrong_header_is_rejected (tests.test_datasets.TestDatasetStreamingTest.test_wrong_header_is_rejected)
+A header other than x,y is rejected. ... ok
+test_wrong_number_of_values_reports_line_number (tests.test_datasets.TestDatasetStreamingTest.test_wrong_number_of_values_reports_line_number)
+A malformed line is reported with its line number. ... ok
+test_covers (tests.test_functions.FunctionTest.test_covers)
+covers distinguishes x values inside and outside the range. ... ok
+test_deviation_measures (tests.test_functions.FunctionTest.test_deviation_measures)
+Deviations, their sum of squares and maximum are correct. ... ok
+test_evaluation_at_known_point_is_exact (tests.test_functions.FunctionTest.test_evaluation_at_known_point_is_exact)
+Evaluation at a stored point returns the stored value. ... ok
+test_evaluation_between_points_interpolates_linearly (tests.test_functions.FunctionTest.test_evaluation_between_points_interpolates_linearly)
+Evaluation between points interpolates linearly. ... ok
+test_evaluation_of_array_returns_array (tests.test_functions.FunctionTest.test_evaluation_of_array_returns_array)
+Array input returns an array of values. ... ok
+test_evaluation_outside_range_is_refused (tests.test_functions.FunctionTest.test_evaluation_outside_range_is_refused)
+Extrapolation beyond the defined range raises ValueError. ... ok
+test_invalid_input_is_rejected (tests.test_functions.FunctionTest.test_invalid_input_is_rejected)
+Arrays of unequal length or empty arrays are rejected. ... ok
+test_points_are_sorted_by_x (tests.test_functions.FunctionTest.test_points_are_sorted_by_x)
+Points passed in any order are stored sorted by x. ... ok
+test_invalid_name_is_rejected (tests.test_functions.IdealFunctionTest.test_invalid_name_is_rejected)
+A name not of the form y<number> is rejected. ... ok
+test_number_is_derived_from_name (tests.test_functions.IdealFunctionTest.test_number_is_derived_from_name)
+The number of an ideal function is parsed from its name. ... ok
+test_missing_input_returns_error_code (tests.test_visualization_and_main.MainIntegrationTest.test_missing_input_returns_error_code)
+A missing input file leads to exit code 1 and an error message. ... ok
+test_successful_run_creates_database_and_report (tests.test_visualization_and_main.MainIntegrationTest.test_successful_run_creates_database_and_report)
+An end-to-end run stores the expected mapping and writes the report. ... ok
+test_all_views_are_created_with_expected_types (tests.test_visualization_and_main.VisualizerTest.test_all_views_are_created_with_expected_types)
+All five views are created with the expected Bokeh types. ... ok
+test_grid_plots_contain_one_panel_per_function (tests.test_visualization_and_main.VisualizerTest.test_grid_plots_contain_one_panel_per_function)
+The grid plots contain one panel per chosen function. ... ok
+test_report_is_written (tests.test_visualization_and_main.VisualizerTest.test_report_is_written)
+The HTML report is written to disk. ... ok
+
+----------------------------------------------------------------------
+Ran 55 tests in 8.905s
+
+OK
+
+$ python -m coverage report
+Name                               Stmts   Miss  Cover
+------------------------------------------------------
+ideal_functions\__init__.py            6      0   100%
+ideal_functions\analysis.py           90      1    99%
+ideal_functions\database.py           55      6    89%
+ideal_functions\datasets.py           95      5    95%
+ideal_functions\exceptions.py          5      0   100%
+ideal_functions\functions.py          45      1    98%
+ideal_functions\visualization.py     115      0   100%
+main.py                               46      1    98%
+------------------------------------------------------
+TOTAL                                457     14    97%
